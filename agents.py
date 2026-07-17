@@ -49,7 +49,7 @@ Structure the report as:
 Be detailed, factual and professional."""),
 ])
 
-writer_chain = writer_prompt | llm | StrOutputParser()
+writer_chain = writer_prompt | llm1 | StrOutputParser()
 
 # Critic Chain
 
@@ -76,4 +76,4 @@ One line verdict:
 ..."""),
 ])
 
-critic_chain = critic_prompt | llm | StrOutputParser()
+critic_chain = critic_prompt | llm2 | StrOutputParser()
